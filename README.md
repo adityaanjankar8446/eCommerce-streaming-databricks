@@ -9,27 +9,27 @@ External API ──> Python script (local) ──> JSON files ──> manual upl
                                                                                     │
                                                                                     ▼
                                                                   ┌──────────────────────────────┐
-                                                                  │  01_bronze_ingestion          │
-                                                                  │  (Structured Streaming,        │
-                                                                  │   trigger=AvailableNow)         │
+                                                                  │  01_bronze_ingestion         │
+                                                                  │  (Structured Streaming,      │
+                                                                  │   trigger=AvailableNow)      │
                                                                   └──────────────────────────────┘
                                                                                     │
                                                                                     ▼
                                                                   ┌──────────────────────────────┐
-                                                                  │  02_silver_transformations     │
-                                                                  │  (Structured Streaming,        │
-                                                                  │   trigger=AvailableNow)         │
+                                                                  │  02_silver_transformations   │
+                                                                  │  (Structured Streaming,      │
+                                                                  │   trigger=AvailableNow)      │
                                                                   └──────────────────────────────┘
                                                                                     │
                                                                                     ▼
                                                                   ┌──────────────────────────────┐
-                                                                  │  03_gold_aggregations          │
+                                                                  │  03_gold_aggregations        │
                                                                   └──────────────────────────────┘
                                                                                     │
                                                                                     ▼
                                                                   ┌──────────────────────────────┐
-                                                                  │  04_materialized_views          │
-                                                                  │  05_views                       │
+                                                                  │  04_materialized_views       │
+                                                                  │  05_views                    │
                                                                   └──────────────────────────────┘
 
                 Orchestrated end-to-end by a Databricks Job: Ecommerce_Streaming_Job
